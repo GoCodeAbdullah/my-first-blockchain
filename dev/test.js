@@ -3,5 +3,11 @@ const Blockchain = require("./blockchain");
 const bitcoin = new Blockchain();
 
 bitcoin.CreateNewBlock(1234,'hdjsakdhsakjdsakjhkj','sadfsafdsgdgfdgsfa');
+bitcoin.CreateNewBlock(4321,'dasdkdhsakjdsakjhkj','sadfsadasdasdsgdgfdgsfa');
 
-console.log(bitcoin)
+bitcoin.CreateNewTransaction(200,'senderaddressss','recieveraddressss');
+bitcoin.CreateNewTransaction(40,'sendersadressss','recievesaddressss');
+
+bitcoin.CreateNewBlock(421321,'zxczsdkdhsakjdsakjsad','xzcxzcxzsadasdsgdgfdgsfa');
+
+console.log(bitcoin.chain[2])

@@ -20,4 +20,22 @@ Blockchain.prototype.CreateNewBlock = function (nonce,prevHash,hash){
     return newBlock;
 }
 
+Blockchain.prototype.getLastBlock = function (){
+    return this.chain[this.chain.length - 1];
+}
+
+Blockchain.prototype.CreateNewTransaction = function(amount,senderAddress,recieverAddress){
+    const newTransaction={
+        amount: amount,
+        senderAddress: senderAddress,
+        recieverAddress: recieverAddress
+    }
+
+    this.pendingTransactions.push(newTransaction);
+
+    return this.getLastBlock()['index'] + 1;
+}
+
+
+
 module.exports = Blockchain;
