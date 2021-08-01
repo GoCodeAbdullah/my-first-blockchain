@@ -2,12 +2,30 @@ const Blockchain = require("./blockchain");
 
 const bitcoin = new Blockchain();
 
-bitcoin.CreateNewBlock(1234,'hdjsakdhsakjdsakjhkj','sadfsafdsgdgfdgsfa');
-bitcoin.CreateNewBlock(4321,'dasdkdhsakjdsakjhkj','sadfsadasdasdsgdgfdgsfa');
+// bitcoin.CreateNewBlock(1234,'hdjsakdhsakjdsakjhkj','sadfsafdsgdgfdgsfa');
+// bitcoin.CreateNewBlock(4321,'dasdkdhsakjdsakjhkj','sadfsadasdasdsgdgfdgsfa');
 
-bitcoin.CreateNewTransaction(200,'senderaddressss','recieveraddressss');
-bitcoin.CreateNewTransaction(40,'sendersadressss','recievesaddressss');
+// bitcoin.CreateNewTransaction(200,'senderaddressss','recieveraddressss');
+// bitcoin.CreateNewTransaction(40,'sendersadressss','recievesaddressss');
 
-bitcoin.CreateNewBlock(421321,'zxczsdkdhsakjdsakjsad','xzcxzcxzsadasdsgdgfdgsfa');
+// bitcoin.CreateNewBlock(421321,'zxczsdkdhsakjdsakjsad','xzcxzcxzsadasdsgdgfdgsfa');
 
-console.log(bitcoin.chain[2])
+const previousHash = "dsafaskdsadasdakdadsadfdka";
+const newBlockHash = [
+    {
+        amount: 30,
+        sender: "asdasdasdasda",
+        reciever: "asdasdasdasdadas"
+    },
+    {
+        amount: 30,
+        sender: "xasdwdasdasda",
+        reciever: "qwewqewqdasd"
+    },
+]
+
+const nonce = 3214;
+
+var hashValue = bitcoin.hashBlock(previousHash,newBlockHash,nonce);
+
+console.log(hashValue)
