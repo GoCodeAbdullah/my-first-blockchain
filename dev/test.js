@@ -24,8 +24,7 @@ const newBlockHash = [
     },
 ]
 
-const nonce = 3214;
 
-var hashValue = bitcoin.hashBlock(previousHash,newBlockHash,nonce);
+//var hashValue = bitcoin.hashBlock(previousHash,newBlockHash,nonce);
 
-console.log(hashValue)
+console.log(bitcoin.proofOfWork(previousHash,newBlockHash));
